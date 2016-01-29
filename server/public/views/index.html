@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>directives</title>
+    <script src="vendors/angular/angular.min.js"></script>
+    <script src="assets/scripts/client.min.js"></script>
+</head>
+<body>
+    <div ng-controller="mainController">
+        <div>
+            <h2>ng-copy</h2>
+            <input ng-copy="copied=true" ng-init="copied=false" placeholder="Enter Text">
+            You have copied from here: {{copied}}
+            <h2>ng-paste</h2>
+            <input ng-paste="paste=true" ng-init="paste=false" placeholder="paste here">
+            You have pasted here: {{paste}}
+        </div>
+
+        <br/>
+
+        <div>
+            <h2>ng-mouseover</h2>
+            <button ng-mouseover="count = count + 1" ng-init="count=0">mouse over me</button>
+            Mouse over count: {{count}}
+        </div>
+
+        <br/>
+
+        <h2>ng-dblclick</h2>
+        <button ng-dblclick="click = click + 1" ng-init="click = 0">Double Click</button>
+        Double-click count: {{click}}
+    </div>
+
+</body>
+</html>
